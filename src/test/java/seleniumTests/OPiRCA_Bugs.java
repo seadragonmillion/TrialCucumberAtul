@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import MainClass.Login;
+import MainClass.OPiRCABug;
+import MainClass.beforeFunctions;
 import io.cucumber.java.Scenario;
-import kaleTestSoftware.Login;
-import kaleTestSoftware.OPiRCABug;
-import kaleTestSoftware.beforeFunctions;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
