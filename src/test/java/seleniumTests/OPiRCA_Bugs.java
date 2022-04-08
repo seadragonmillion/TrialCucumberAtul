@@ -78,7 +78,7 @@ public class OPiRCA_Bugs {
 		}
 	}
 
-	@When("she creates an OPiRCA report to verify old bugs")
+	@When("she creates an MainClass.OPiRCA report to verify old bugs")
 	public void she_creates_an_OPiRCA_report_to_verify_old_bugs() throws Exception {
 
 		OPiRCABug opirca = new OPiRCABug();
