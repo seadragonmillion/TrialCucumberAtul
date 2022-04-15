@@ -2,7 +2,7 @@ Feature: Automated OPiRCA Bugs Test
 	
 @ChromeTest
 Scenario: Test OPiRCA bugs
-	Given user is on KALE Home Page "https://www.google.com/" with username as "jenkinsvmnonadmin" and password as "S2FsZWplbmtpbnNAMTIz" on browser "chrome"
+	Given user is on KALE Home Page "https://kaleqa.error-free.com" with username as "jenkinsvmnonadmin" and password as "S2FsZWplbmtpbnNAMTIz" on browser "chrome"
 	When she creates an OPiRCA report to verify old bugs
 	And logout from KALE
 

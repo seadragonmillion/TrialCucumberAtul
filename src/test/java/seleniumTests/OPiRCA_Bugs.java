@@ -23,6 +23,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import io.cucumber.java.After;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
@@ -51,7 +52,7 @@ public class OPiRCA_Bugs {
 			driver.quit();
 		}
 	};*/
-
+	
 	@Given("user is on KALE Home Page {string} with username as {string} and password as {string} on browser {string}")
 	public void user_is_on_KALE_Home_Page_with_username_as_and_password_as_on_browser(String url, String username, String password, String browser) throws Exception {
 		//Launch chrome browser
@@ -78,15 +79,15 @@ public class OPiRCA_Bugs {
 			throw e;
 		}
 	}
-
-	@When("she creates an MainClass.OPiRCA report to verify old bugs")
+	
+	@When("she creates an OPiRCA report to verify old bugs")
 	public void she_creates_an_OPiRCA_report_to_verify_old_bugs() throws Exception {
 
 		OPiRCABug opirca = new OPiRCABug();
 		opirca.pathForAllBugs(driver);
 	}
 	
-	@When("logout from KALE")
+	@And("logout from KALE")
 	public void logout_from_KALE() throws Exception {
 		Login login = new Login();
 		login.logout(driver);
