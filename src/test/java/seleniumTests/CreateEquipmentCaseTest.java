@@ -1,23 +1,17 @@
 package seleniumTests;
 
 
-import io.cucumber.java.After;
-import io.cucumber.java.Scenario;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,6 +26,10 @@ import PageObjects.CaseBrowsePageObj;
 import PageObjects.CreateEquipPageObj;
 import PageObjects.CreateHumanCasePageObj;
 import PageObjects.LoginPageObj;
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 
 
 
@@ -67,8 +65,8 @@ public class CreateEquipmentCaseTest {
 		}
 	};*/
 
-	@Given("^user is on KALE Home Page \"([^\"]*)\" with username as \"([^\"]*)\" and password as \"([^\"]*)\" on browser \"([^\"]*)\"$")
-	public void user_is_on_KALE_Home_Page_with_username_as_and_password_as_on_browser(String url, String username, String password, String browser) throws Exception {
+	@Given("^user is on KALE Home Page \"([^\"]*)\" with username as \"([^\"]*)\" and password as \"([^\"]*)\" on browser1 \"([^\"]*)\"$")
+	public void user_is_on_KALE_Home_Page_with_username_as_and_password_as_on_browser1(String url, String username, String password, String browser) throws Exception {
 		//Launch chrome browser
 		beforeFunctions bf = new beforeFunctions();
 		Login login = new Login();
@@ -94,8 +92,8 @@ public class CreateEquipmentCaseTest {
 		}
 	}
 
-	@When("she deletes previous cases for {string} in {string}")
-	public void she_deletes_previous_cases_for_in(String caseType, String devAsiaUSIE11) throws Exception {
+	@When("she deletes previous cases for {string} in1 {string}")
+	public void she_deletes_previous_cases_for_in1(String caseType, String devAsiaUSIE11) throws Exception {
 
 		CreateEquipmentCase obj1 = new CreateEquipmentCase();
 		CreateEquipmentCase3 obj3 = new CreateEquipmentCase3();
@@ -416,12 +414,11 @@ public class CreateEquipmentCaseTest {
 		Thread.sleep(2000);
 	}
 
-	@When("^logout from KALE$")
-	public void logout_from_KALE() throws Exception {
-		Login login = new Login();
-		login.logout(driver);
-		driver.manage().window().maximize();
-	}
+	/*
+	 * @When("^logout from KALE$") public void logout_from_KALE() throws Exception {
+	 * Login login = new Login(); login.logout(driver);
+	 * driver.manage().window().maximize(); }
+	 */
 
 
 	@After

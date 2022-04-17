@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources/features" ,
+ features = "src/test/resources/features/OPiRCABug.feature" ,
  glue= {"seleniumTests"}  ,
  tags= "@ChromeTest",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}

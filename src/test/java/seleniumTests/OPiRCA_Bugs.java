@@ -53,7 +53,7 @@ public class OPiRCA_Bugs {
 		}
 	};*/
 	
-	@Given("user is on KALE Home Page {string} with username as {string} and password as {string} on browser {string}")
+	@Given("^user is on KALE Home Page \"([^\"]*)\" with username as \"([^\"]*)\" and password as \"([^\"]*)\" on browser \"([^\"]*)\"$")
 	public void user_is_on_KALE_Home_Page_with_username_as_and_password_as_on_browser(String url, String username, String password, String browser) throws Exception {
 		//Launch chrome browser
 		beforeFunctions bf = new beforeFunctions();
@@ -80,14 +80,14 @@ public class OPiRCA_Bugs {
 		}
 	}
 	
-	@When("she creates an OPiRCA report to verify old bugs")
+	@When("^she creates an OPiRCA report to verify old bugs$")
 	public void she_creates_an_OPiRCA_report_to_verify_old_bugs() throws Exception {
 
 		OPiRCABug opirca = new OPiRCABug();
 		opirca.pathForAllBugs(driver);
 	}
 	
-	@And("logout from KALE")
+	@And("^logout from KALE$")
 	public void logout_from_KALE() throws Exception {
 		Login login = new Login();
 		login.logout(driver);
