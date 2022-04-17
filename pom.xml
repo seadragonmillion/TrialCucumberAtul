@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>Kale</groupId>
-  <artifactId>SanityTestRemoteVerification</artifactId>
+  <artifactId>KaleQACucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <build>
         <plugins>
@@ -27,7 +27,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>CucumberWebGui</projectName>
+                            <projectName>KaleQACucumber-Report</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
